@@ -1,10 +1,10 @@
 import './App.css';
-import { useState, useEffect } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
 import data from './data';
 
-function App() {
+const Alternative2 = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -33,17 +33,16 @@ function App() {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex((prevIndex) => {
-        let index = prevIndex + 1;
+        let index = prevIndex - 1;
 
-        if (index > people.length - 1) {
-          index = 0;
+        if (index < 0) {
+          index = people.length - 1;
         }
         return index;
       });
     }, 4000);
-    return () => {
-      clearInterval(slider);
-    };
+
+    return () => clearInterval(slider);
   }, [index]);
 
   return (
@@ -56,9 +55,10 @@ function App() {
       <div className='section-center'>
         {people &&
           people.map((person, personIndex) => {
-            const { id, image, name, title, quote } = person;
+            const { id, title, image, name, quote } = person;
 
             let position = 'nextSlide';
+
             if (personIndex === index) {
               position = 'activeSlide';
             }
@@ -89,6 +89,6 @@ function App() {
       </div>
     </section>
   );
-}
+};
 
-export default App;
+export default Alternative2;
