@@ -33,10 +33,10 @@ const Alternative2 = () => {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex((prevIndex) => {
-        let index = prevIndex - 1;
+        let index = prevIndex + 1;
 
-        if (index < 0) {
-          index = people.length - 1;
+        if (index > people.length - 1) {
+          index = 0;
         }
         return index;
       });
