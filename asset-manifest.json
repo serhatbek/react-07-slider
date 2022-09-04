@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-07-slider/static/css/main.b4cf9182.css",
-    "main.js": "/react-07-slider/static/js/main.5970c85f.js",
+    "main.js": "/react-07-slider/static/js/main.13552c5e.js",
     "index.html": "/react-07-slider/index.html",
     "main.b4cf9182.css.map": "/react-07-slider/static/css/main.b4cf9182.css.map",
-    "main.5970c85f.js.map": "/react-07-slider/static/js/main.5970c85f.js.map"
+    "main.13552c5e.js.map": "/react-07-slider/static/js/main.13552c5e.js.map"
   },
   "entrypoints": [
     "static/css/main.b4cf9182.css",
-    "static/js/main.5970c85f.js"
+    "static/js/main.13552c5e.js"
   ]
 }
