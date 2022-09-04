@@ -8,7 +8,7 @@ const Alternative2 = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
-  const prevSlide = () => {
+  const nextSlide = () => {
     setIndex((prevIndex) => {
       let index = prevIndex + 1;
 
@@ -19,7 +19,7 @@ const Alternative2 = () => {
     });
   };
 
-  const nextSlide = () => {
+  const prevSlide = () => {
     setIndex((prevIndex) => {
       let index = prevIndex - 1;
 
